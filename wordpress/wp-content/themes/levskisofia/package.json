@@ -1,0 +1,27 @@
+{
+  "name": "hockey-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass assets/styles/sass/index.scss assets/styles/css/index.css",
+    "watch-sass": "sass --watch assets/styles/sass/index.scss assets/styles/css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekovniki/hockey-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jekovniki/hockey-website/issues"
+  },
+  "homepage": "https://github.com/jekovniki/hockey-website#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.67.0"
+  }
+}

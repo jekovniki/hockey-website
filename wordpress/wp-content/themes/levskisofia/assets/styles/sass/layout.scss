@@ -1,89 +1,45 @@
-.header-line {
-    background-color: $secondary;
-    height: 4px;
-}
-
-body {
-    margin:0;
-}
-
-.section {
-    padding: 0 1rem;
-}
-
-.legal-panel {
-    background-color: $secondary;
-    color: $white;
-}
 
 footer {
-    .club-identity {
+    .top {
         background-color: $main;
-        img {
-            width:125px;
-        }
     }
-    .footer-wrapper {
-        padding: 1rem 1rem 1px;
-    }
-    nav {
-        a {
-            color: $white;
-            margin-right: 10px;
-            font-weight: 400;
-            &:hover {
-                color: $yellow;
-            }
-        }
-        ul {
-            list-style-type: none;
-            margin-block-start:0;
-            padding-inline-start: 0;
-        }
-    }
-    .copyright {
-        border-top: 1px solid hsla(0,0%,100%,.2);
-        padding-top: 1rem;
+    .bottom {
+        background-color: $secondary;
     }
 }
 
-@media only screen and (min-width: 1176px) {
-    .section {
-        max-width: 992px;
-        margin: 0 auto;
-    }
-
-    footer {
-        .footer-wrapper {
-            padding: 1rem 0 1px;
-        }
-        .club-identity {
-            >.footer-wrapper {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-        nav {
-            ul {
-                display: flex;
-            }
-        }
-        .club-information {
-            border-right: 1px solid hsla(0, 0%, 100%,.2);
-        }
+.club-identity {
+    img {
+        max-width: 90px;
+        height: auto;
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    .section {
-        max-width: 1280px;
-        margin: 0 auto;
+#menu-secondary-menu {
+    a {
+        margin-right: 1rem;
     }
+}
 
-    footer {
-        .footer-wrapper {
-            margin-left: calc(50vw - 640px);
-            margin-right: calc(50vw - 640px);
-        }
+#menu-club-menu {
+    flex-flow:column;
+
+    a {
+        margin-right: 1rem;
+    }
+}
+
+.club-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (min-width:767px) {
+    .left-info {
+        border-right: 1px solid hsla(0,0%,100%,.3);
+    }
+    .club-menu {
+        margin-left: 1rem;
     }
 }

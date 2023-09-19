@@ -5,5 +5,7 @@ $black: #000000;
 $footer-text: #e3e7ed;
 $yellow: #e0c984;
 
-$default_font: 0.875rem;
+$default_font: 1rem;
+$copyright_font: 0.875rem;
+$copyright_lineheight: calc($copyright_font * 1.6);
 $default_lineheight: calc($default_font * 1.6);

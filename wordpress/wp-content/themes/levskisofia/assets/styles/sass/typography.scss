@@ -15,6 +15,7 @@ a {
     transition: .4s;
     &:hover {
         transition: .4s;
+        color: $yellow;
     }
 }
 
@@ -32,7 +33,7 @@ footer {
         font-weight: 100;
     }
     .copyright {
-        font-size: $default_font;
-        line-height: $default_lineheight;
+        font-size: $copyright_font;
+        line-height: $copyright_font;
     }
 }

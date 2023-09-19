@@ -10,8 +10,8 @@ h1, h2, h3, p {
 
 a {
     text-decoration: none;
-    font-size: .875rem;
-    line-height: 1.4285714285;
+    font-size: $default_font;
+    line-height: $default_lineheight;
     transition: .4s;
     &:hover {
         transition: .4s;
@@ -22,13 +22,17 @@ footer {
     p, a {
         font-family: 'Raleway', sans-serif;
         color: $footer-text;
+        font-size: $default_font;
+        line-height: $default_lineheight;
     }
     a {
         text-decoration: none;
-        font-size: .875rem;
-        line-height: 1.4285714285;
+        font-size: $default_font;
+        line-height: $default_lineheight;
+        font-weight: 100;
     }
     .copyright {
-        font-size: .875rem;
+        font-size: $default_font;
+        line-height: $default_lineheight;
     }
 }

@@ -7,21 +7,30 @@ body {
     margin:0;
 }
 
+.section {
+    padding: 0 1rem;
+}
+
 .legal-panel {
     background-color: $secondary;
     color: $white;
 }
 
 footer {
+    .club-identity {
+        background-color: $main;
+        img {
+            width:125px;
+        }
+    }
     .footer-wrapper {
         padding: 1rem 1rem 1px;
-        border-top: 1px solid hsla(0,0%,100%,.2);
     }
     nav {
         a {
             color: $white;
             margin-right: 10px;
-            font-weight: 800;
+            font-weight: 400;
             &:hover {
                 color: $yellow;
             }
@@ -32,21 +41,35 @@ footer {
             padding-inline-start: 0;
         }
     }
+    .copyright {
+        border-top: 1px solid hsla(0,0%,100%,.2);
+        padding-top: 1rem;
+    }
 }
 
 @media only screen and (min-width: 1176px) {
     .section {
-        padding: 4px 0 0 20px;
+        max-width: 992px;
+        margin: 0 auto;
     }
 
     footer {
         .footer-wrapper {
             padding: 1rem 0 1px;
         }
+        .club-identity {
+            >.footer-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
         nav {
             ul {
                 display: flex;
             }
+        }
+        .club-information {
+            border-right: 1px solid hsla(0, 0%, 100%,.2);
         }
     }
 }

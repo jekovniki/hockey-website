@@ -7,7 +7,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    
     <header>
         <div class="header-line"></div>
         <div class="section">
@@ -51,6 +50,53 @@
     
     <footer>
         <div class="legal-panel">
+            <div class="club-identity">
+                <div class="section">
+                <?php
+                    $footer_image = get_theme_mod('footer_image', '');
+                    if (!empty($footer_image)) {
+                        echo '<img src="' . esc_url($footer_image) . '" alt="Footer Image">';
+                    }
+                ?>
+                </div>
+                <div class="footer-wrapper">
+                    <div class="club-information">
+                    <?php
+                        $footer_name = get_theme_mod('footer_name', '');
+                        $footer_location = get_theme_mod('footer_location', '');
+                        $footer_arena = get_theme_mod('footer_arena', '');
+                        $footer_town = get_theme_mod('footer_town', '');
+                        if (!empty($footer_name)) {
+                            echo '<p><strong>' . esc_html($footer_name) . '</strong></p>';
+                        }
+                    
+                        if (!empty($footer_location)) {
+                            echo '<p>' . esc_html($footer_location) . '</p>';
+                        }
+                    
+                        if (!empty($footer_arena)) {
+                            echo '<p>' . esc_html($footer_arena) . '</p>';
+                        }
+                    
+                        if (!empty($footer_town)) {
+                            echo '<p>' . esc_html($footer_town) . '</p>';
+                        }
+                    ?>
+                    </div>
+                    <div class="club-navi">
+                        <nav>
+                            <?php
+                            // Display the WordPress navigation menu
+                            wp_nav_menu( array(
+                                'theme_location' => 'club-menu', // You should define this in your functions.php file
+                                'container'      => false, // Remove the outer div container
+                                'menu_class'     => 'club-menu', // CSS class for the ul element
+                            ) );
+                            ?>
+                        </nav>
+                    </div>
+                </div>
+            </div>
             <div class="footer-wrapper">
                 <nav>
                     <?php
@@ -58,7 +104,7 @@
                     wp_nav_menu( array(
                         'theme_location' => 'secondary-menu', // You should define this in your functions.php file
                         'container'      => false, // Remove the outer div container
-                        'menu_class'     => 'menu', // CSS class for the ul element
+                        'menu_class'     => 'secondary-menu', // CSS class for the ul element
                     ) );
                     ?>
                 </nav>

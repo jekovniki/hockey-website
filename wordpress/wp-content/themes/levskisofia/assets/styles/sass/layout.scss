@@ -35,6 +35,15 @@ footer {
     align-items: center;
 }
 
+.category-news {
+    img.staging {
+        width:100%;
+        height: auto;
+        max-height:75vh;
+        object-fit: cover;
+    }
+}
+
 @media only screen and (min-width:767px) {
     .left-info {
         border-right: 1px solid hsla(0,0%,100%,.3);
